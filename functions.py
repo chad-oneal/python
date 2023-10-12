@@ -12,3 +12,8 @@ def write_todos(todos_list, filepath=FILEPATH,):
         file_local.writelines(todos_list)
 
 
+if __name__ == '__main__':
+    print('Hello')
+    print(get_todos())
+
+
