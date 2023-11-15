@@ -1,8 +1,14 @@
 import functions
 import PySimpleGUI as sg
 import time
+import os
+
+if not os.path.exists('todos.txt'):
+    with open('todos.txt', 'w') as file:
+        pass
 
 sg.theme('DefaultNoMoreNagging')
+
 label = sg.Text('Enter a To-Do', font=('Karma', 20))
 input_box = sg.InputText(tooltip='Enter todo', key='todo')
 add_button = sg.Button('Add', font='Karma, 14')
